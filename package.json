@@ -1,6 +1,6 @@
 {
   "name": "oneom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node API for getting TV series/schedule/torrent info",
   "main": "index.js",
   "module": "oneom.js",
