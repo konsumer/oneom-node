@@ -40,6 +40,12 @@ npm i oneom
 List Tv Shows
 
 **Kind**: global constant  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [offset] | <code>Number</code> | start page (default: 0) |
+| [limit] | <code>Number</code> | page-size (default: 100) |
+
 <a name="show"></a>
 
 ## show ⇒ <code>Promise</code>
@@ -72,8 +78,8 @@ Search for Tv show by title
 | Param | Type | Description |
 | --- | --- | --- |
 | query | <code>String</code> | Tv show title to seaarch for |
-| field | <code>String</code> | Field to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end` |
-| limit | <code>Number</code> | Number of results to return (default: 5) |
+| [field] | <code>String</code> | Field to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end` (default: `title`) |
+| [limit] | <code>Number</code> | Number of results to return (default: 5) |
 
 <a name="fresh"></a>
 

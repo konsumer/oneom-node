@@ -16,6 +16,8 @@ const get = url => fetch(base + url, {headers: {'Accept': 'application/json'}})
 
 /**
  * List Tv Shows
+ * @param  {Number} [offset] start page (default: 0)
+ * @param  {Number} [limit]  page-size (default: 100)
  * @return {Promise}
  */
 export const list = (offset = 0, limit = 100) => get(`/serial/${limit}/${offset}`)
@@ -37,8 +39,8 @@ export const episode = (id) => get(`/ep/${id}`)
 /**
  * Search for Tv show by title
  * @param  {String} query Tv show title to seaarch for
- * @param  {String} field Field to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end`
- * @param  {Number} limit Number of results to return (default: 5)
+ * @param  {String} [field] Field to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end` (default: `title`)
+ * @param  {Number} [limit] Number of results to return (default: 5)
  * @return {Promise}
  */
 export const search = (query, field = 'title', limit = 5) => get(`/search/serial?limit=${limit}&${field}=${encodeURIComponent(query)}`)
