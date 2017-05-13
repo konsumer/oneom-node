@@ -1,2 +1,98 @@
 # oneom-node
+
 Node API for getting TV series/schedule/torrent info
+
+## API
+
+<dl>
+<dt><a href="#list">list</a> ⇒ <code>Promise</code></dt>
+<dd><p>List Tv Shows</p>
+</dd>
+<dt><a href="#show">show</a> ⇒ <code>Promise</code></dt>
+<dd><p>Get extended info about a show, by ID</p>
+</dd>
+<dt><a href="#episode">episode</a> ⇒ <code>Promise</code></dt>
+<dd><p>Get extended info about an episode</p>
+</dd>
+<dt><a href="#search">search</a> ⇒ <code>Promise</code></dt>
+<dd><p>Search for Tv show by title</p>
+</dd>
+<dt><a href="#fresh">fresh</a> ⇒ <code>Promise</code></dt>
+<dd><p>Fresh eps with torrents</p>
+</dd>
+<dt><a href="#schedule">schedule</a> ⇒ <code>Promise</code></dt>
+<dd><p>Get Tv Schedule for date</p>
+</dd>
+<dt><a href="#config">config</a> ⇒ <code>Promise</code></dt>
+<dd><p>Get config data, like lang list, source, country and such</p>
+</dd>
+</dl>
+
+<a name="list"></a>
+
+## list ⇒ <code>Promise</code>
+List Tv Shows
+
+**Kind**: global variable
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [limit] | <code>Number</code> | Number of records to return (default) |
+| [offset] | <code>Number</code> | Page of records |
+
+<a name="show"></a>
+
+## show ⇒ <code>Promise</code>
+Get extended info about a show, by ID
+
+**Kind**: global variable
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>Number</code> | ID, as returned by `list()` |
+
+<a name="episode"></a>
+
+## episode ⇒ <code>Promise</code>
+Get extended info about an episode
+
+**Kind**: global variable
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>Number</code> | ID, as returned by `list()` or `show()` |
+
+<a name="search"></a>
+
+## search ⇒ <code>Promise</code>
+Search for Tv show by title
+
+**Kind**: global variable
+
+| Param | Type | Description |
+| --- | --- | --- |
+| query | <code>String</code> | Tv show title to seaarch for |
+
+<a name="fresh"></a>
+
+## fresh ⇒ <code>Promise</code>
+Fresh eps with torrents
+
+**Kind**: global variable
+<a name="schedule"></a>
+
+## schedule ⇒ <code>Promise</code>
+Get Tv Schedule for date
+
+**Kind**: global variable
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [date] | <code>Date</code> | String (format: `YYYY-MM-DD`) or Date-object |
+
+<a name="config"></a>
+
+## config ⇒ <code>Promise</code>
+Get config data, like lang list, source, country and such
+
+**Kind**: global variable
