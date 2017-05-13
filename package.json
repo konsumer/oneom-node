@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "Node API for getting TV series/schedule/torrent info",
   "main": "index.js",
-  "module": "index.mjs",
+  "module": "oneom.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
-    "build": "babel index.mjs > index.js",
+    "build": "babel oneom.js > index.js",
+    "docs": "jsdoc2md -f oneom.js >> README.md",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -25,10 +26,12 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "chai": "^3.5.0",
+    "chai-jest-snapshot": "^0.3.0",
     "mocha": "^3.3.0"
   },
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "zpad": "^0.5.0"
   },
   "babel": {
     "plugins": [

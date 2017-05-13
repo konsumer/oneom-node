@@ -2,7 +2,12 @@
 
 Node API for getting TV series/schedule/torrent info
 
-## API
+## installation
+
+```
+npm i oneom
+```
+## Constants
 
 <dl>
 <dt><a href="#list">list</a> ⇒ <code>Promise</code></dt>
@@ -33,19 +38,13 @@ Node API for getting TV series/schedule/torrent info
 ## list ⇒ <code>Promise</code>
 List Tv Shows
 
-**Kind**: global variable
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [limit] | <code>Number</code> | Number of records to return (default) |
-| [offset] | <code>Number</code> | Page of records |
-
+**Kind**: global constant  
 <a name="show"></a>
 
 ## show ⇒ <code>Promise</code>
 Get extended info about a show, by ID
 
-**Kind**: global variable
+**Kind**: global constant  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -56,7 +55,7 @@ Get extended info about a show, by ID
 ## episode ⇒ <code>Promise</code>
 Get extended info about an episode
 
-**Kind**: global variable
+**Kind**: global constant  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -67,7 +66,7 @@ Get extended info about an episode
 ## search ⇒ <code>Promise</code>
 Search for Tv show by title
 
-**Kind**: global variable
+**Kind**: global constant  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -78,13 +77,13 @@ Search for Tv show by title
 ## fresh ⇒ <code>Promise</code>
 Fresh eps with torrents
 
-**Kind**: global variable
+**Kind**: global constant  
 <a name="schedule"></a>
 
 ## schedule ⇒ <code>Promise</code>
 Get Tv Schedule for date
 
-**Kind**: global variable
+**Kind**: global constant  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -95,4 +94,4 @@ Get Tv Schedule for date
 ## config ⇒ <code>Promise</code>
 Get config data, like lang list, source, country and such
 
-**Kind**: global variable
+**Kind**: global constant  
