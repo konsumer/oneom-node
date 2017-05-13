@@ -26,7 +26,6 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "chai": "^3.5.0",
-    "chai-jest-snapshot": "^0.3.0",
     "mocha": "^3.3.0"
   },
   "dependencies": {
@@ -40,6 +39,7 @@
     "presets": [
       "latest",
       "es2017"
-    ]
+    ],
+    "compact": false
   }
 }

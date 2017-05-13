@@ -7,7 +7,8 @@ Node API for getting TV series/schedule/torrent info
 ```
 npm i oneom
 ```
-## Constants
+
+## API
 
 <dl>
 <dt><a href="#list">list</a> ⇒ <code>Promise</code></dt>
@@ -70,6 +71,7 @@ Search for Tv show by title
 
 | Param | Type | Description |
 | --- | --- | --- |
+| field | <code>String</code> | to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end` |
 | query | <code>String</code> | Tv show title to seaarch for |
 
 <a name="fresh"></a>

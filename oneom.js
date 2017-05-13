@@ -37,9 +37,11 @@ export const episode = (id) => get(`/ep/${id}`)
 /**
  * Search for Tv show by title
  * @param  {String} query Tv show title to seaarch for
+ * @param  {String} field to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end`
+ * @param  {Number} Number of results to return (default: 5)
  * @return {Promise}
  */
-export const search = (query) => get(`/serial/search/${encodeURIComponent(query)}`)
+export const search = (query, field = 'title', limit = 5) => get(`/search/serial?limit=${limit}&${field}=${encodeURIComponent(query)}`)
 
 /**
  * Fresh eps with torrents
