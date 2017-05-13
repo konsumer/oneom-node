@@ -71,8 +71,9 @@ Search for Tv show by title
 
 | Param | Type | Description |
 | --- | --- | --- |
-| field | <code>String</code> | to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end` |
 | query | <code>String</code> | Tv show title to seaarch for |
+| field | <code>String</code> | Field to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end` |
+| limit | <code>Number</code> | Number of results to return (default: 5) |
 
 <a name="fresh"></a>
 

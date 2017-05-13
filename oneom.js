@@ -37,8 +37,8 @@ export const episode = (id) => get(`/ep/${id}`)
 /**
  * Search for Tv show by title
  * @param  {String} query Tv show title to seaarch for
- * @param  {String} field to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end`
- * @param  {Number} Number of results to return (default: 5)
+ * @param  {String} field Field to search by: `title`, `network_id`, `country_id`, `genre_id`, `lang_id`, `people_id`, `character_id`, `tvrage_id`, `tvmaze_id`, `mdb_id`, `tvdb_id`, `status_id`, `runtime`, `start`, `end`
+ * @param  {Number} limit Number of results to return (default: 5)
  * @return {Promise}
  */
 export const search = (query, field = 'title', limit = 5) => get(`/search/serial?limit=${limit}&${field}=${encodeURIComponent(query)}`)
@@ -55,7 +55,7 @@ export const fresh = () => get(`/ep`)
  * @return {Promise}
  */
 export const schedule = (date = new Date()) => {
-  if (typeof date === 'string') {
+  if (typeof date !== 'object') {
     date = new Date(date)
   }
   return get(`/ep/date/${date.getFullYear()}-${zpad(date.getMonth())}-${zpad(date.getDay())}`)
